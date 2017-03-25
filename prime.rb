@@ -4,16 +4,10 @@ def prime?(x)
 
 return false if x <= 1
 
-x = Math.sqrt(x)
-
-    (1..x).to_a.each do |number|
-        puts number
+    (2..x/2).to_a.each do |number|
         if x % number == 0
             return false
-        elsif x % number != 0
-            return true
         end
     end
+    return true
 end
-
-prime?(40)
